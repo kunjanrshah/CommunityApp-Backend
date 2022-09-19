@@ -1,0 +1,14 @@
+#examples a {
+  text-decoration: underline;
+}
+
+.map_canvas { 
+  
+  height: 145px; 
+  margin: 10px 20px 10px 0;
+}
+
+#multiple li { 
+  cursor: pointer; 
+  text-decoration: underline; 
+}

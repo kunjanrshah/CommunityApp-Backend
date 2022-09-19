@@ -1,0 +1,7 @@
+@font-face {
+    font-family: avenir;
+    src: url(../fonts/Avenir.ttc);
+}
+p{
+    font-family: avenir;
+}
