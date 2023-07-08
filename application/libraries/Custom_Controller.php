@@ -17,7 +17,7 @@ abstract class Custom_Controller extends CI_Controller {
 
         $this->login_user_id = $userData['id'];
 
-        $this->load->library('encrypt');
+        $this->load->library('encryption');
         $this->load->library('upload');
         $this->load->helper('file');
     }

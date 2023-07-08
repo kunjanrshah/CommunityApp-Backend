@@ -9,7 +9,7 @@
     <div class="row">
         <div class="col-md-4"></div>
         <div class="col-md-4"> 
-            <form action="#" class="validateForm" method="POST">
+            <form action="<?php echo base_url('site/index'); ?>" class="validateForm" method="POST">
                 <div class="form-row">
                     <div class="form-group col-md-12">
                         <input type="number" autocomplete="off" class="form-control" placeholder="Family Head Mobile" id="mobile" name="mobile" required="required" onKeyPress="if(this.value.length==10) return false;">

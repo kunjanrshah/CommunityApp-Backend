@@ -10,7 +10,7 @@ abstract class Front_Controller extends CI_Controller {
 
         $this->load->helper(array('form', 'url'));
 
-        //$this->load->library('encrypt');
+        $this->load->library('encryption');
         $this->load->library('upload');
         $this->load->helper('file');
     }

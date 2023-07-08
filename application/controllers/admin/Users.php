@@ -63,8 +63,8 @@ class Users extends Custom_Controller {
 
         $sWhere = $_POST['search']['value'];
 
-        $dataList = $this->Users_model->get_datatables("", $sWhere, $start, $length, "id", "DESC");
-        $dataListCount = $this->Users_model->get_datatables("", $sWhere);
+        $dataList = $this->Users_model->get_datatables("", $sWhere, $start, $length, "id", "DESC","","");
+        $dataListCount = $this->Users_model->get_datatables("", $sWhere,"","","","","","");
 
         $data = array();
 

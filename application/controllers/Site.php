@@ -1,5 +1,5 @@
 <?php
-
+error_reporting(0);
 defined('BASEPATH') OR exit('No direct script access allowed');
 require(APPPATH . '/libraries/Front_Controller.php');
 
@@ -8,6 +8,7 @@ class Site extends Front_Controller {
     public function __construct() {
 
         parent::__construct();
+        $this->load->library('session');
 
         $this->load->model(array('State_model', 'City_model', 'Users_model', 'SubCommunity_model',
             'LocalCommunity_model',
@@ -51,7 +52,7 @@ class Site extends Front_Controller {
             $this->session->unset_userdata('frontLogin');
             $this->session->unset_userdata('backEndLogin');
         }
-
+			
         $data['content'] = 'index';
         if (isset($_POST) && !empty($_POST)) { 
             $mobile = $_POST['mobile'];
@@ -76,7 +77,7 @@ class Site extends Front_Controller {
                             'is_logged_in' => true,
                         );
                         $this->session->set_userdata('frontLogin', $data);
-
+                     
                         if($user[0]['role'] == 'SUPERADMIN' || $user[0]['role'] == 'LOCAL_ADMIN' || $user[0]['role'] == 'SUB_ADMIN'){
                             $this->session->set_userdata('backEndLogin', $data);
                         }
@@ -93,7 +94,7 @@ class Site extends Front_Controller {
                 }
             } 
             else {
-                
+                 
                 $this->session->set_flashdata('flash_message_error', "No any family head registered with $mobile mobile number <a href='" . base_url('site/register') . "'>click here</a> for register.");
                 redirect('site');
             }
@@ -102,10 +103,11 @@ class Site extends Front_Controller {
     }
 
     public function members() {
-        $user = $this->session->userdata('frontLogin');
-        if (!empty($user)) {
-            $data['user'] = $this->Users_model->get_user($user['id']);
-            $data['members'] = $this->Users_model->getMembers($user['id']);
+        $user1 = $this->session->get_userdata('frontLogin');
+       
+        if (!empty($user1)) {
+            $data['user'] = $this->Users_model->get_user($user1['frontLogin']['id']);
+            $data['members'] = $this->Users_model->getMembers($user1['frontLogin']['id']);
         } else {
             redirect('site');
         }
