@@ -275,8 +275,7 @@ class Events extends Custom_Controller {
 
     public function shareEvents($id) {
         $data['id'] = $id;
-        $data['cities'] = $this->model_name->getCities();
-
+        $data['cities'] = $this->model_name->getCities("","");
         $data['content'] = 'admin/events/shareEvent';
         $this->load->view('admin/layouts/main', $data);
     }

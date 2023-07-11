@@ -602,7 +602,7 @@ class Users extends Custom_Controller {
         unlink('./uploads/users/original/' . $user['profilePic']);
 
         $data = array(
-            'profilePic' => 'default.jpg'
+            'profile_pic' => 'default.jpg'
         );
 
         $this->Users_model->updateUser($id, $data);
