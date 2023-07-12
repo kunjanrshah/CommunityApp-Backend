@@ -85,7 +85,7 @@ defined('EXIT_DATABASE') OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN') OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX') OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 
-define('APP_NAME', 'MUSLIM GHANCHI SAMAJ');
+define('APP_NAME', 'VANZA SAMAJ');
 
 define('GOOGLE_API_KEY', 'AIzaSyAPDGvUIdiXoMbRXrtZR-4RBhl3qOooaZs');
 define('ABSURL', '/home/undha/public_html/');
