@@ -6,7 +6,7 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item" style="color: white">
                     <!--<a class="nav-link" href="<?= base_url('site/register') ?>">Register</a>-->
-                    Helpline Number: Mehboob GOGDA (+91 93771 33222) WhatsApp Only
+                    Helpline Number: RAJU YADAV (+91 80009 74974) WhatsApp Only
                 </li>
             </ul>
         </div>
