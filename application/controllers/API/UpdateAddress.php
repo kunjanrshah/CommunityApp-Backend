@@ -1,5 +1,5 @@
 <?php
-// https://muslimghanchisamaj.in/API/UpdateAddress
+// https://https://yadav.samajapp.in/API/UpdateAddress
 
 error_reporting(0);
 require(APPPATH . '/libraries/REST_Controller.php');

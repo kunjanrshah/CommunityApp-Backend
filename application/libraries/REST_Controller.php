@@ -1,5 +1,5 @@
 <?php
-//muslimghanchisamaj.in
+//https://yadav.samajapp.in/
 defined('BASEPATH') or exit('No direct script access allowed');
 
 abstract class REST_Controller extends CI_Controller {
