@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * /home/superbi1/public_html/yadav/application/controllers/API/GetUsersByDate.php
+ * /home/superbi1/public_html/muslimghanchi.org/application/controllers/API/GetUsersByDate.php
  * Date: 3/1/2018
  * Time: 11:33 PM
  */
