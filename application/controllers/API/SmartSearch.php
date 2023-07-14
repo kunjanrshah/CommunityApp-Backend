@@ -49,7 +49,12 @@ class SmartSearch extends REST_Controller
             if(!empty($dataList)){
                 $totalMem = 0;
                 foreach($dataList as $d) {
-                    $totalMem = $totalMem + count($d['members']);
+                    if(@$d['members'] !=''){
+						$members =$d['members'];
+					}else{
+						$members =0;
+					}
+                    $totalMem = $totalMem + $members;
                 }
                 $response = array('success' => true, 'total_records' => count($dataListCount),"members" => $dataList);
                 echo json_encode($response);

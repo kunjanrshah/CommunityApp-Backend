@@ -716,7 +716,7 @@ class API_model extends CI_Model {
         $this->db->select('id,name');
         $this->db->from("business_categories");
         if (isset($date) && $date!='') {
-            $date = date('Y-m-d H:i:s',$date);
+         //   $date = date('Y-m-d H:i:s',$date);
             $this->db->where('updated_on >=',$date);
         }
         $this->db->where('status','1');
